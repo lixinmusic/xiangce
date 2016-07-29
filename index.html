@@ -1,0 +1,338 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>图片</title>
+	<style>
+ul,li{
+	margin: 0px;
+	padding:0px;
+	list-style: none; 
+}
+
+
+
+
+.products{
+	width: 900px;
+	height: 500px;
+	box-shadow: 0 0 3px;
+	margin: 30px auto;
+	position: relative;
+}
+.products li{
+	width: 210px;
+	height: 210px;
+	margin: 5px 5px;
+   background:pink;
+   float: left;
+   overflow: hidden;
+   position: relative;
+
+}
+
+.products li a{
+	
+	width: 100%;
+	height: 100%;
+	background: #e87050;
+	z-index: 10;
+	margin: 10px 10px;
+	 
+}
+.products li a:hover img{
+  transform:scale(1.2,1.2); 
+}
+.products li a:hover +.info {
+  transform:translateY(0);
+
+}	
+.button{
+
+	width: 80px;
+	height: 40px;
+	float: right;
+	background: #232949;
+	position: absolute;
+	top:2px;
+	right:2px;
+	text-align: center;
+	line-height: 40px;
+	border-radius: 5px;
+	cursor:pointer;
+	z-index: 10;
+	color:#fff;
+}
+.products li img{
+	width: 100%;
+	height: 100%;
+   transition:all 0.8s ease;
+   
+
+
+}
+.info{
+	 transform:translateY(100%);
+	 transition:all 0.8s ease;
+	 padding: 20px;
+	 width:100%;
+	 height: auto;
+	 hei ght: 50px;
+	 background: rgba(200,255,255,0.8);
+	 position: absolute;
+	 text-align: center;
+	 left:5px;
+	 bottom:0;
+     z-index: 9;
+     }
+.cart.show{
+	height: 100%;
+	opacity: 1;
+}
+
+.cart{
+	position: fixed;
+	top:0;
+	left:0;
+	right:0;
+	bottom:0;
+	opacity:0.8;
+	width: 100%;
+	height: 0;
+	background:rgba(0,0,0,0.8);
+	cursor:pointer;
+	opacity: 0;
+    z-index: 10;
+    transition:all 0.5s ease;
+     overflow: hidden;
+
+}
+.cart .rongqi{
+	width: 750px;
+	height: 100%;
+	margin: 0 auto;
+	background: rgba(255,255,255,0.3);
+
+}
+
+.close{
+	position: absolute;
+	top:50px;
+	right: 100px;
+	position: 30px 50px;
+    color :#393F4C;
+    cursor: pointer;
+    background: #fff;
+    text-align: center;
+    border-radius: 5px;
+    font-size: 14px;
+}
+.cart .rongqi img{
+	position: absolute;
+	top:0;
+	left: 0;
+	right:0;
+	bottom: 0;
+	margin:auto;
+	max-width: 100%;
+	max-height:100%;
+
+	
+
+}
+.cart .neirong{
+	position: absolute;
+	top:0;
+	left:0;
+	bottom: 0;
+	right:0;
+	margin:0 auto;
+}
+.boxx1{
+	width: 300px;
+	height: 100px;
+	background: #fff;
+	display: none;
+	z-index: 1000;
+	position: absolute;
+   top:0;
+   left:0;
+   right:0;
+   bottom:0;
+   margin:auto;
+   text-align: center;
+   line-height: 100px;
+   color:#393F4C;
+
+}
+.boxx2{
+	width: 300px;
+	height: 100px;
+	background:#fff;
+   display: none;
+   z-index: 1000;
+   position: absolute;
+   top:0;
+   left:0;
+   bottom: 0;
+   right:0;
+   margin:auto;
+   text-align: center;
+   line-height: 100px;
+   color:#393F4C;
+}
+.chong{
+	width: 80px;
+	height: 40px;
+	float: right;
+	background: #232949;
+	position: absolute;
+	bottom:2px;
+	right:2px;
+	text-align: center;
+	line-height: 40px;
+	border-radius: 5px;
+	cursor:pointer;
+	z-index: 10;
+	color:#fff;
+}
+.wo h1{
+	width: 200px;
+	height: 50px;
+	margin:0 auto;
+	color: #aaa;
+}
+
+
+	</style>
+</head>
+<body>
+	<div class="wo"><h1>简单的相册</h1></div>
+	<div class="products">
+		<div class="button">换一批</div>
+		<div class="chong">重新加载</div>
+	<ul>
+		<li><a href="" class="link"><img src="img/paths2.jpg" alt=""></a>
+             <div class="info">this is a img</div>
+		</li>
+		<li><a href="" class="link"><img src="img/paths3.jpg" alt=""></a>
+		<div class="info">this is a img</div>
+	</li>
+		<li><a href="" class="link"><img src="img/paths5.jpg" alt=""></a>
+		 <div class="info">this is a img</div>
+		</li>
+		<li><a href="" class="link"><img src="img/paths9.jpg" alt=""></a>
+		 <div class="info">this is a img</div>
+		</li>
+		<li><a href="" class="link"><img src="img/paths1.jpg" alt=""></a>
+		 <div class="info">this is a img</div>
+		</li>
+		<li><a href="" class="link"><img src="img/paths9.jpg" alt=""></a>
+		 <div class="info">this is a img</div>
+		</li>
+		<li><a href="" class="link"><img src="img/paths8.jpg" alt=""></a>
+		 <div class="info">this is a img</div>
+		</li>
+		<li><a href="" class="link"><img src="img/paths7.jpg" alt=""></a>
+		 <div class="info">this is a img</div>
+		</li>
+	</ul>
+</div>
+<div class="cart">
+	<div class="rongqi">
+		
+		
+      <img src="" alt="">
+	</div>
+	<div class="close">点击返回</div>
+	<div class="boxx1">此照片已经最后一张哦！</div>
+    <div class="boxx2">此照片已经是第一张哦！</div>
+</div>
+	
+</body>
+<script src="js/function.js"></script>
+<script src="js/jquery-1.11.3.js"></script>
+<script>
+$(function(){
+
+var next=[
+{img:'img/brand-1262 (4).jpg',link:'http://www.sina.com.cn/'},
+{img:'img/banner8.jpg',link:'http://www.sina.com.cn/'},
+{img:'img/banner.jpg',link:'http://www.sina.com.cn/'},
+{img:'img/10.jpg',link:'http://www.sina.com.cn/'},
+{img:'img/brand-1262 (9).jpg',link:'http://www.sina.com.cn/'},
+{img:'img/brand-1262 (5).jpg',link:'http://www.sina.com.cn/'},
+{img:'img/imgbrand-1262 (7).jpg',link:'http://www.sina.com.cn/'},
+{img:'img/imgbrand-1262 (8).jpg',link:'http://www.sina.com.cn/'}
+]
+
+
+
+
+
+		$(".products .button").on('click',function(){
+			//TODO:换成用ajax去请求服务器获取数据
+			var url=$('.products img').attr('src');
+			$('.products img').attr('src',function(i,oldsrc){
+				return next[i].img
+			});
+
+			$('.products a').attr('href',function(i,oldsrc){
+			return next[i].link;
+		    })
+		
+		})
+		//门帘的（遮罩的下拉和左右点击）																																																
+$('.products li').on('click',function(e){
+ e.preventDefault();
+ $('.cart').addClass('show');
+$('.cart .rongqi img').attr('src',$(this).find('img').attr('src'));
+
+$(".cart").attr('index',$(this).index());
+  })
+
+    $('.cart .close').on('click',function(e){
+    	e.stopPropagation();
+   $('.cart').removeClass('show');
+})
+    var imgs=$('.products img');
+    $('.cart').on('mousedown',function(e){
+    	e.preventDefault();
+    })
+    $('.cart').on('click',function(e){
+    	var index=parseInt($(this).attr('index'))
+    	if(e.clientX>$(this).outerWidth(true)/2){
+      index+=1;
+    }else{
+     index-=1;
+    }
+    if(index===imgs.length){
+      /*alert("已经是最后一张了");*/
+      $('.boxx1').css('display','block');
+     setTimeout(function(){
+     	$('.boxx1').css('display','none');
+     },2800)
+      return;
+    }
+    if(index===-1){
+      /*alert("已经是第一张了");*/
+      $('.boxx2').css('display','block');
+      setTimeout(function(){
+      	$('.boxx2').css('display','none');
+      },2800)
+      return;
+    }
+    $(".cart").attr("index",index);
+    $(".cart img").attr("src",$(".products li").find("img").eq(index).attr("src"));
+
+    })
+//重新加载的事件
+	$('.chong').on('click',function(){
+		location.reload();
+	})
+
+
+
+})
+</script>
+</html>
